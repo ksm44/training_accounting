@@ -1,43 +1,16 @@
-# Домашнее задание к курсу «React: библиотека № 1 в современной фронтенд-разработке»
+# React + Vite
 
-## Список заданий
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### Блок 1. Компоненты
+Currently, two official plugins are available:
 
-1.1. [Компоненты](components)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-1.2. [События и состояние](events-state)
+## React Compiler
 
-1.3. [Props](props)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-1.4. [Формы](forms)
+## Expanding the ESLint configuration
 
-### Блок 2. Продвинутые техники, одностраничные приложения
-
-2.1. [Композиция компонентов](composition)
-
-2.2. [Жизненный цикл и работа с HTTP](lifecycle-http)
-
-2.3. [HOC](hoc)
-
-2.4. [hooks, Context API](hooks-context)
-
-2.5. [React Router](router)
-
-### Блок 3. Redux - управление состоянием
-
-3.1. [Redux](redux)
-
-3.1. [Redux Toolkit](toolkit)
-
-3.2. [Redux Observable](observable)
-
-3.3. [Redux Saga](saga)
-
-### Полезные ссылки:
-
-* [исходники с лекций](https://github.com/netology-code/ra16-code)
-* [требования к домашним работам](requirements.md)
-* [список рекомендуемого ПО](software.md)
-* [инструкция по работе в терминале](terminal.md)
-* [типичные проблемы и способы их решения](problems.md)
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
