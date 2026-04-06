@@ -1,14 +1,4 @@
-export default function ViewData({ trainingList, setTrainingList, setDate, setDistance }) {
-    const handleDelete = (dateToDelete) => {
-        const newList = trainingList.filter(training => training.date !== dateToDelete);
-        setTrainingList(newList);
-    }
-    
-    const handleEdit = (editTraining) => {
-        setDate(editTraining.date);
-        setDistance(editTraining.distance)
-        handleDelete(editTraining.date);
-    }
+export default function ViewData({ trainingList, dateFormated, onEdit, onDelete }) {
     
     return (
         <div className="data-table">
@@ -23,12 +13,12 @@ export default function ViewData({ trainingList, setTrainingList, setDate, setDi
                     <div className="empty-state">Нет данных о тренировках</div>
                 ) : (
                         trainingList.map(training => (
-                            <div className="table-row" data-date={training.dataDate}  key={training.dataDate}>
-                                <div className="col-date">{training.date}</div>
+                            <div className="table-row" data-date={training.date}  key={training.date}>
+                                <div className="col-date">{dateFormated(training.date)}</div>
                                 <div className="col-distance">{training.distance}</div>
                                 <div className="col-actions">
-                                    <button className="action-btn edit-btn" title="Редактировать" onClick={() => handleEdit(training)}>✎</button>
-                                    <button className="action-btn delete-btn" title="Удалить" onClick={() => handleDelete(training.date)}>✕</button>
+                                    <button className="action-btn edit-btn" title="Редактировать" onClick={() => onEdit(training)}>✎</button>
+                                    <button className="action-btn delete-btn" title="Удалить" onClick={() => onDelete(training.date)}>✕</button>
                                 </div>
                             </div>
                         ))
